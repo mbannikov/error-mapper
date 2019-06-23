@@ -1,12 +1,10 @@
 package ru.mbannikov
 
-private val registry = ErrorMapperRegistry()
-
 fun map(message: String) {
     println("До:")
     println("\t$message")
     println("После:")
-    println("\t${registry.map(message)}\n")
+    println("\t${ErrorMapperPipeline.map(message)}\n")
 }
 
 fun main() {
